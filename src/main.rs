@@ -51,7 +51,7 @@ fn main() {
     println!("there are {} matching messages", ok_count);
 
     // this is ported from Sophie Alpert's solution here https://github.com/sophiebits/adventofcode/blob/main/2020/day19.py
-    // because my approach doesn't work for creating the necessary regex
+    // because my approach doesn't work for creating the necessary regex for part 2
     let merged_regex = Regex::new(&format!("^{}$", apply_rules(&mut rules, 0))).expect("invalid regex");
     let ok_count = messages.iter().filter(|message| merged_regex.is_match(*message)).count();
     println!("there are {} matching messages", ok_count);
@@ -61,7 +61,7 @@ fn main() {
     /**************************************************************************
     PART TWO
     this is ported from Sophie Alpert's solution here https://github.com/sophiebits/adventofcode/blob/main/2020/day19.py
-    because my approach doesn't work for creating the necessary regex
+    because my approach doesn't work for creating the necessary regex for part 2
     **************************************************************************/
     let merged_regex = Regex::new(&format!("^{}$", apply_rules_2(&mut rules, 0))).expect("invalid regex");
     let ok_count = messages.iter().filter(|message| merged_regex.is_match(*message)).count();
